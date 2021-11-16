@@ -15,15 +15,32 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         self.contents.delegate = self
+        
+        let bgImage = UIImage(named: "memo-background.png")!
+        self.view.backgroundColor = UIColor(patternImage: bgImage)
+        
+        self.contents.layer.borderWidth = 0
+        self.contents.layer.borderColor = UIColor.clear.cgColor
+        self.contents.backgroundColor = .clear
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 9 //이미지 사진에 맞춰 줄간격 설정.
+        self.contents.attributedText = NSAttributedString(string: " ", attributes: [.paragraphStyle: style])
+        self.contents.text = ""
     }
     //MARK: IBAction
     @IBAction func save(_ sender: Any) {
+        let alertV = UIViewController()
+        let iconImage = UIImage(named: "warning-icon-60")
+        alertV.view = UIImageView(image: iconImage)
+        alertV.preferredContentSize = iconImage?.size ?? CGSize.zero
+        
         //내용이 입력되지 않았을 경우 경고한다.
         guard self.contents.text?.isEmpty == false else {
             let alert = UIAlertController(title: "nil", message: "내용을 입력해주세요.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default)
             alert.addAction(action)
-            
+            alert.setValue(alertV, forKey: "contentViewController")
             self.present(alert, animated: true)
             return
         }
@@ -83,6 +100,17 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.subject = contents.substring(with: NSRange(location: 0, length: length) ) // 제목을 subject에 저장
         
         self.navigationItem.title = self.subject // 네비게이션 제목으로 출력
+    }
+    
+    //화면 터치시 네비게이션바 토글작용
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let bar = self.navigationController?.navigationBar
+        
+        let ts = TimeInterval(0.3)
+        UIView.animate(withDuration: ts){
+            bar?.alpha = ( bar?.alpha == 0 ? 1 : 0)
+        }
+        
     }
 
 }

@@ -18,6 +18,10 @@
 		DB319AB527390AA60080EEED /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB319AB427390AA60080EEED /* MemoReadVC.swift */; };
 		DB319AB727390B5D0080EEED /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB319AB627390B5D0080EEED /* MemoCell.swift */; };
 		DB319AB927390BA60080EEED /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB319AB827390BA60080EEED /* MemoData.swift */; };
+		DB319C3627437A4B0080EEED /* CSLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB319C3527437A4B0080EEED /* CSLogButton.swift */; };
+		DB319C3D27437D700080EEED /* memo-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB319C3A27437D700080EEED /* memo-background@2x.png */; };
+		DB319C3E27437D700080EEED /* warning-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB319C3B27437D700080EEED /* warning-icon-60@2x.png */; };
+		DB319C3F27437D700080EEED /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DB319C3C27437D700080EEED /* button-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		DB319AB427390AA60080EEED /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
 		DB319AB627390B5D0080EEED /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		DB319AB827390BA60080EEED /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		DB319C3527437A4B0080EEED /* CSLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLogButton.swift; sourceTree = "<group>"; };
+		DB319C3A27437D700080EEED /* memo-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo-background@2x.png"; sourceTree = "<group>"; };
+		DB319C3B27437D700080EEED /* warning-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-icon-60@2x.png"; sourceTree = "<group>"; };
+		DB319C3C27437D700080EEED /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 		DB319A9B2738E6970080EEED /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				DB319C3C27437D700080EEED /* button-bg.png */,
+				DB319C3A27437D700080EEED /* memo-background@2x.png */,
+				DB319C3B27437D700080EEED /* warning-icon-60@2x.png */,
+				DB319C3927437D5F0080EEED /* Resource */,
 				DB319A9C2738E6970080EEED /* AppDelegate.swift */,
 				DB319A9E2738E6970080EEED /* SceneDelegate.swift */,
 				DB319AA02738E6970080EEED /* ViewController.swift */,
@@ -78,8 +90,16 @@
 				DB319AB427390AA60080EEED /* MemoReadVC.swift */,
 				DB319AB627390B5D0080EEED /* MemoCell.swift */,
 				DB319AB827390BA60080EEED /* MemoData.swift */,
+				DB319C3527437A4B0080EEED /* CSLogButton.swift */,
 			);
 			path = MyMemory;
+			sourceTree = "<group>";
+		};
+		DB319C3927437D5F0080EEED /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB319AA92738E69A0080EEED /* LaunchScreen.storyboard in Resources */,
+				DB319C3E27437D700080EEED /* warning-icon-60@2x.png in Resources */,
 				DB319AA62738E69A0080EEED /* Assets.xcassets in Resources */,
+				DB319C3D27437D700080EEED /* memo-background@2x.png in Resources */,
+				DB319C3F27437D700080EEED /* button-bg.png in Resources */,
 				DB319AA42738E6970080EEED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB319C3627437A4B0080EEED /* CSLogButton.swift in Sources */,
 				DB319AB727390B5D0080EEED /* MemoCell.swift in Sources */,
 				DB319AB927390BA60080EEED /* MemoData.swift in Sources */,
 				DB319AB327390A870080EEED /* MemoFormVC.swift in Sources */,
