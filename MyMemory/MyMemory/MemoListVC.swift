@@ -10,6 +10,19 @@ import UIKit
 class MemoListVC: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate // 앱 델리게이트 객체의 참조 정보
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let revealVC = self.revealViewController() {
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            
+            self.navigationItem.leftBarButtonItem = btn
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
