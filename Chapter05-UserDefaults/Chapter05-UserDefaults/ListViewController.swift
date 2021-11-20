@@ -22,11 +22,11 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return super.tableView(tableView, numberOfRowsInSection: section)
+        return super.tableView(tableView, numberOfRowsInSection: section) // 부모 메소드 사용
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return super.numberOfSections(in: tableView)
+        return super.numberOfSections(in: tableView) // 부모 메소드 사용
     }
     // 테이블뷰컨트롤러 델리게이트 메소드를 이용해 편집 하는 방법 1
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -85,6 +85,5 @@ class ListViewController: UITableViewController {
         })
         
         self.present(alert, animated: false)
-        
     }
 }
