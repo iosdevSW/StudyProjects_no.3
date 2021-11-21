@@ -33,7 +33,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홍길동" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRf-Hz-PAK">
-                                                    <rect key="frame" x="349" y="11" width="45" height="21"/>
+                                                    <rect key="frame" x="203" y="11" width="191" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -133,7 +133,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="624" y="-9"/>
+            <point key="canvasLocation" x="623.1884057971015" y="-9.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VbL-ai-Kbv">
