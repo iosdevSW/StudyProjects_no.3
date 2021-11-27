@@ -24,6 +24,15 @@ class MemoListVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //튜토리얼 화면 띄우기 view didload는 메모리에 로드만 된 상태이기 때문에 화면 전환이 불가능하여 willappear에서 생성
+        let ud = UserDefaults.standard
+        if ud.bool(forKey: UserInfoKey.tutorial) == false {
+            let vc = self.instanceTutorialVC(name: "MasterVC")
+            vc?.modalPresentationStyle = .fullScreen
+            self.present(vc!, animated: false)
+            return
+        }
+        
         self.tableView.reloadData()
     }
     
